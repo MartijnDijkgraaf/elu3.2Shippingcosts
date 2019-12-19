@@ -2,7 +2,7 @@
 
 namespace DetermineShippingCosts
 {
-    public class DetermineShippingCosts
+    public class ClassAssignmentAvans
     {
         public double ShippingCosts(bool calculateShippingCosts, string typeOfShippingCosts, double totalPrice)
         {

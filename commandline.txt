@@ -1,0 +1,3 @@
+dotnet test /p:CollectCoverage=true /p:CoverletOutput=../coverage/ /p:CoverletOutputFormat=opencover
+
+reportgenerator "-reports:../coverage/*.xml" "-reporttypes:HTMLInline" "-targetdir:../coverage/report"

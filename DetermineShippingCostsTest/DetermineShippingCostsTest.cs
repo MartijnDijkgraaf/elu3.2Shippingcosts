@@ -1,18 +1,22 @@
 using NUnit.Framework;
+using DetermineShippingCosts;
 
 namespace DetermineShippingCostsTest
 {
+    [TestFixture] 
     public class DetermineShippingCostsTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void TestThereAreNoShippingCosts()
         {
-            Assert.Pass();
+            var determineShippingCosts = createClassAssignmentAvans();
+            var result = determineShippingCosts.ShippingCosts(false, "Instore", 1300);
+            Assert.AreEqual(result, 0);
+        }
+        
+        public ClassAssignmentAvans createClassAssignmentAvans()
+        {
+            return new ClassAssignmentAvans();
         }
     }
 }
