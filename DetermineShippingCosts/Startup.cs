@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -10,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace DetermineShippingCosts
 {
+    [ExcludeFromCodeCoverage]
     public class Startup
     {
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -27,14 +29,6 @@ namespace DetermineShippingCosts
             }
 
             app.UseRouting();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
         }
     }
 }
